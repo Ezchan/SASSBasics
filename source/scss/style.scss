@@ -1,0 +1,168 @@
+$primary-blue: #058ed9;
+$light-blue: #4bb3fd;
+$faded-blue: #3e6680;
+$primary-orange: #fc5130;
+$faded-orange: #ed6a5a;
+$font-size: 18px;
+$fontType: Arial, Helvetica;
+$boxBorderRadius: 5px;
+
+h1 {
+  font-family: $fontType;
+  font-size: $font-size * 3;
+  color: $faded-blue;
+}
+
+h2 {
+  font-family: $fontType;
+  font-size: $font-size * (1 + ((2/6)*5));
+  color: $faded-blue;
+}
+
+h3 {
+  font-family: $fontType;
+  font-size: $font-size * (1 + ((2/6)*4));
+  color: $faded-blue;
+}
+
+h4 {
+  font-family: $fontType;
+  font-size: $font-size * (1 + ((2/6)*3));
+  color: $faded-blue;
+}
+
+h5 {
+  font-family: $fontType;
+  font-size: $font-size * (1 + ((2/6)*2));
+  color: $faded-blue;
+}
+
+h6 {
+  font-family: $fontType;
+  font-size: $font-size * (1 + (2/6));
+  color: $faded-blue;
+}
+
+p {
+  font-size: $font-size;
+}
+
+@keyframes changeLinkBorder {
+  from {
+    border-bottom: none;
+  }
+
+  to {
+    border-bottom: 1px solid $faded-orange;
+    -webkit-transition: border-bottom 1s;
+    -moz-transition: border-bottom 1s;
+    -ms-transition: border-bottom 1s;
+    -o-transition: border-bottom 1s;
+    transition: border-bottom 1s;
+  }
+}
+
+a {
+  font-size: $font-size;
+  text-decoration: none;
+  color: $primary-orange;
+  font-weight: 600;
+  animation-duration: 0.5s;
+  font-family: $fontType;
+  animation-name: changeLinkBorder;
+  animation-iteration-count: infinite;
+  &:hover {
+    font-size: $font-size * 1.25;
+    animation: none;
+  }
+}
+
+input[type="button"] {
+  color: #fff;
+  border-color: darken($primary-blue, 10%);
+  border-radius: $boxBorderRadius;
+  background-color: $primary-blue;
+  font-family: $fontType;
+  padding: 10px 20px;
+  line-height: $font-size;
+  font-size: $font-size;
+  &.danger {
+    background-color: $primary-orange;
+    border-color: darken($primary-orange, 10%);
+    &:hover {
+      background-color: darken($primary-orange, 5%);
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    background-color: darken($primary-blue, 5%);
+    cursor: pointer;
+  }
+}
+
+input[type="text"],
+input[type="password"] {
+  border-radius: $boxBorderRadius;
+  font-family: $fontType;
+  font-size: $font-size;
+  line-height: $font-size;
+  text-indent: 3px;
+  &:focus {
+    border-color: $light-blue;
+  }
+}
+
+textarea {
+  border-radius: $boxBorderRadius;
+  font-family: $fontType;
+  font-size: $font-size;
+  height: 50px;
+  &:focus {
+    border-color: $light-blue;
+  }
+}
+
+img {
+  border-radius: $boxBorderRadius;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  height: 15px;
+  width: 15px;
+}
+
+label {
+  color: $faded-blue;
+  font-family: $fontType;
+  font-size: $font-size;
+}
+
+figure {
+  border: 3px solid;
+  border-radius: $boxBorderRadius;
+  border-color: darken($faded-blue, 10%);
+  display: inline-block;
+  font-family: $fontType;
+  font-size: $font-size;
+  figcaption {
+    padding: 10px 10px;
+    border-top: 3px solid;
+    border-color: $faded-blue;
+  }
+}
+
+table {
+  border: 2px solid $faded-blue;
+  font-family: $fontType;
+  th {
+    border: 2px solid $faded-blue;
+    text-align: center;
+    font-size: $font-size;
+  }
+  tr {
+    border: 1px solid $faded-blue;
+    text-align: center;
+    font-size: $font-size * 0.75;
+  }
+}
