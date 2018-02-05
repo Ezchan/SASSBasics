@@ -47,10 +47,6 @@ p {
 
   to {
     border-bottom: 1px solid $faded-orange;
-    -webkit-transition: border-bottom 1s;
-    -moz-transition: border-bottom 1s;
-    -ms-transition: border-bottom 1s;
-    -o-transition: border-bottom 1s;
     transition: border-bottom 1s;
   }
 }
@@ -64,6 +60,7 @@ a {
   font-family: $fontType;
   animation-name: changeLinkBorder;
   animation-iteration-count: infinite;
+
   &:hover {
     font-size: $font-size * 1.25;
     animation: none;
@@ -79,14 +76,17 @@ input[type="button"] {
   padding: 10px 20px;
   line-height: $font-size;
   font-size: $font-size;
+
   &.danger {
     background-color: $primary-orange;
     border-color: darken($primary-orange, 10%);
+
     &:hover {
       background-color: darken($primary-orange, 5%);
       cursor: pointer;
     }
   }
+
   &:hover {
     background-color: darken($primary-blue, 5%);
     cursor: pointer;
@@ -100,6 +100,7 @@ input[type="password"] {
   font-size: $font-size;
   line-height: $font-size;
   text-indent: 3px;
+
   &:focus {
     border-color: $light-blue;
   }
@@ -110,6 +111,15 @@ textarea {
   font-family: $fontType;
   font-size: $font-size;
   height: 50px;
+  padding: 1px 0;
+  line-height: $font-size;
+  background-color: white;
+  cursor: text;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+
   &:focus {
     border-color: $light-blue;
   }
@@ -117,6 +127,7 @@ textarea {
 
 img {
   border-radius: $boxBorderRadius;
+  display: block;
 }
 
 input[type="checkbox"],
@@ -138,6 +149,7 @@ figure {
   display: inline-block;
   font-family: $fontType;
   font-size: $font-size;
+
   figcaption {
     padding: 10px 10px;
     border-top: 3px solid;
@@ -148,11 +160,13 @@ figure {
 table {
   border: 2px solid $faded-blue;
   font-family: $fontType;
+
   th {
     border: 2px solid $faded-blue;
     text-align: center;
     font-size: $font-size;
   }
+
   tr {
     border: 1px solid $faded-blue;
     text-align: center;
